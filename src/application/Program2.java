@@ -20,7 +20,7 @@ public class Program2 {
 		DepartmentDAO departmentDAO = DaoFactory.createDepartmentDao();
 		
 		System.out.println("=== TEST 1: department findById ===");
-		Department department = departmentDAO.findById(3);
+		Department department = departmentDAO.findById(2);
 		
 		System.out.println(department);
 		
@@ -29,15 +29,16 @@ public class Program2 {
 		List<Seller> list = sellerDAO.findByDepartment(department);
 		for (Seller obj : list) {
 			System.out.println(obj);
-		}
+		}*/
 		
-		System.out.println("\n=== TEST 3: seller findAll ===");
-		list = sellerDAO.findAll();
-		for (Seller obj : list) {
+		System.out.println("\n=== TEST 2: department findAll ===");
+		List<Department> list = departmentDAO.findAll();
+		//list = sellerDAO.findAll();
+		for (Department obj : list) {
 			System.out.println(obj);
 		}
 		
-		System.out.println("\n=== TEST 4: seller insert ===");
+		/*System.out.println("\n=== TEST 4: seller insert ===");
 		Seller newSeller = new Seller(null, "Greg", "greg@gmail.com", new Date(), 4000.0, department);
 		sellerDAO.insert(newSeller);
 		System.out.println("Inserted! New id = " + newSeller.getId());

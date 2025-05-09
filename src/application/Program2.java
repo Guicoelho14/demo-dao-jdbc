@@ -49,11 +49,11 @@ public class Program2 {
 		departmentDAO.update(department);
 		System.out.println("Update completed");
 		
-		/*System.out.println("\n=== TEST 6: seller delete ===");
+		System.out.println("\n=== TEST 5: department delete ===");
 		System.out.println("Enter id for delete test: ");
 		int id = sc.nextInt();
-		sellerDAO.deleteById(id);
-		System.out.println("Delete completed");*/
+		departmentDAO.deleteById(id);
+		System.out.println("Delete completed");
 		
 		sc.close();
 	}
